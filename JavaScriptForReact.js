@@ -187,3 +187,27 @@ let studentData = {
 // console.log("First:", first);
 // console.log("Second:", second);
 // console.log("Others:", others);
+
+
+//ALl about functions
+//function declaration (it's hoisted)
+// myName();
+// function myName(){
+//     console.log("Ahtesham");
+// }
+
+
+//function expression (it's not hoisted) function assigned to a variable
+// const myName = function (){ 
+//     console.log("Ahtesham");
+// }
+// myName();
+
+//Arrow function
+// const add = (a,b)=> a+b;
+// console.log(add(2,3));
+
+//Anonymous function (a function without a name)
+// setTimeout(function(){
+//     console.log("Hello after 3 seconds")},3000);
+
