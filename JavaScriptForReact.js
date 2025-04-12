@@ -1,22 +1,22 @@
 // Destructuring  means extracting(unpacking) the data from objects and arrays and assigning them to new variables
 // We use it for api fetching
 //This is an object
-// const studentData = {
-//     name: "Ahtesham",
-//     degree : "MS Computer Science",
-//     graduation : 2025,
-//     skills: ["Mern Stack", "AI Expert"],
-//     education: {
-//         matric: "Science",
-//         inter: "Engineering"
-//     },
-//     hobbies: function (hobby){
-//         //printing by loop
-//         for(const key in hobby){ //it's an object so 'for in loop' is used
-//             console.log(`${key} : ${hobby[key]}`);
-//         }
-//     }
-// }
+let studentData = {
+    name: "Ahtesham",
+    degree : "MS Computer Science",
+    graduation : 2025,
+    skills: ["Mern Stack", "AI Expert"],
+    education: {
+        matric: "Science",
+        inter: "Engineering"
+    },
+    hobbies: function (hobby){
+        //printing by loop
+        for(const key in hobby){ //it's an object so 'for in loop' is used
+            console.log(`${key} : ${hobby[key]}`);
+        }
+    }
+}
 
 //normal way to extract data from object
 // const studentName = studentData.name;
@@ -41,10 +41,10 @@
 // let a = 5
 // let b = 6;
 // console.log(a,b)
- const obj = {
-    a : 7,
-    b : 8
-};
+//  const obj = {
+//     a : 7,
+//     b : 8
+// };
 // ({a,b} = obj);
 // console.log(a,b)
 
@@ -99,8 +99,8 @@
 //     }
 // },
 // ];
-
-
+// const [data] = studentData; //destructuring array to access object inside
+// console.log(data);
 
 //const arr = [1,2,3,4,5];
 // const [first, , , ,fifth, sixth = 6] = arr //commas are creating hole otherwise it assigns sequentially to the variables
@@ -136,3 +136,54 @@
 // console.log(sum(7,3,6));
 // console.log(sum(8,50, 5, 8));
 // console.log(sum(9,78, 2, 4, 1 , 6 ));
+
+
+
+
+// Spread Operator
+//expand an array to all its elements, or unpacking the elements from array
+// syntax is same as rest operator (...)
+// const array = [3,4,2,2,1];
+// console.log(array);
+// //spread operator
+// const newArray = [...array];
+// console.log(newArray);
+// /// we can use spread operator in any part of array
+// const newArray1 = [1, 2 , ...array, 5, 6]
+// console.log(newArray1);
+
+
+
+//Spread Operator in objects
+// const dataUpdate = {
+//     ...studentData,  //if you don't give ... dots here then it will not access all key value pairs but the whole object
+//     relationship: "single"
+// };
+// console.log(dataUpdate);
+
+//if you want to make change in original one then first of all change const to let
+// studentData.relationship="single";
+// console.log(studentData);
+
+// we can override a value if we make it after the ... studentData
+// const dataUpdate = {
+//         graduation : 2026, //will not override
+//         ...studentData,   
+//         graduation : 2026, //will override  
+//         relationship: "single"
+//     };
+//     console.log(dataUpdate);
+
+//using both spread and rest operators
+// const frontend = ["HTML", "CSS", "JavaScript"];
+// const backend = ["Node.js", "Express", "MongoDB"];
+
+// // 1. Spread: Merge
+// const fullStack = [...frontend, ...backend];
+// console.log("Full Stack Skills:", fullStack);
+
+// // 2. Rest: Destructure
+// const [first, second, ...others] = fullStack;
+// console.log("First:", first);
+// console.log("Second:", second);
+// console.log("Others:", others);
