@@ -259,3 +259,20 @@ let studentData = {
 // console.log(result);
 //1. If value1 is not null/undefined, it returns value1.
 //2. If value1 is null/undefined, it returns value2
+
+
+
+//Optional Chaining (?.)
+//Optional chaining lets you safely access nested object properties without having to manually check if each level exists.
+
+//If the value before ?. is null or undefined, JavaScript stops and returns undefined — instead of throwing an error like "Cannot read property 'x' of undefined"
+// let user = {
+//     profile: {
+//       name: "Ali"
+//     }
+//   };
+  
+//   console.log(user.profile?.name); // Ali
+//   console.log(user.contact?.email); // undefined (safe)
+  
+
