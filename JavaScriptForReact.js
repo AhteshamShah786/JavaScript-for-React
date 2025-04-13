@@ -10,6 +10,8 @@ let studentData = {
         matric: "Science",
         inter: "Engineering"
     },
+    isStudent: false,
+    absents : 0,
     hobbies: function (hobby){
         //printing by loop
         for(const key in hobby){ //it's an object so 'for in loop' is used
@@ -211,3 +213,49 @@ let studentData = {
 // setTimeout(function(){
 //     console.log("Hello after 3 seconds")},3000);
 
+
+
+//Short circuiting using AND operator(if first value is false then it will not check next values but print it)
+// a = "apple";
+// b = "book";
+// result = a && b; //if a is true it will print b
+// console.log(result);
+
+// a = 0; //it's falsy value so it will print a
+// b = "book";
+// result = a && b; 
+// console.log(result);
+
+// let result1 = true && callMe();
+// console.log(result1);
+// function callMe(){
+//     console.log("Hello");
+// } 
+
+// console.log(true && "I will be printed");
+// console.log(false && "I'll not be printed");
+
+
+//in AND if first value is falsy value then it will not evaluate next,
+// const {isStudent} = studentData; //falsy value
+// console.log(isStudent);
+// console.log("He is student here" && isStudent )
+// console.log(isStudent && "He is student here")
+
+// //in OR if first value is truthy value then it will not evaluate next,
+// console.log("He is student here" || isStudent )
+// console.log(isStudent || "He is student here")
+
+// console.log(true || "I will be printed");
+// console.log(false || "I'll not be printed");
+
+
+//Nullish coalescing(??) ES2020
+//it's similar to OR operator but does not short circuit for all falsy values
+//it provides default value if null or undefined
+// let value1 = null;
+// let value2 = "No input is given";
+// let result = value1 ?? value2;
+// console.log(result);
+//1. If value1 is not null/undefined, it returns value1.
+//2. If value1 is null/undefined, it returns value2
