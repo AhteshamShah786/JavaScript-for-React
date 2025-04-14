@@ -305,20 +305,25 @@
 
 
 // //map with objects
-// const students = [
-//     { id: 1, name: "Ali", score: 85 },
-//     { id: 2, name: "Sara", score: 42 },
-//     { id: 3, name: "Usman", score: 74 },
-//     { id: 4, name: "Ahsan", score: 90 },
-//   ];
-//   //taking only array of names
-//   const arrayOfNames = students.map((student)=>student.name);
-//   console.log(arrayOfNames);
-//   //Adding a new property to each object e.g: passed/failed
-//   const updateStudents = students.map((student)=> ({
-//     ...student,
-//     result: student.score>=50?"Pass":"Fail"
-//   }));
-//   console.log(updateStudents);
+const students = [
+    { id: 1, name: "Ali", score: 85 },
+    { id: 2, name: "Sara", score: 42 },
+    { id: 3, name: "Usman", score: 74 },
+    { id: 4, name: "Ahsan", score: 90 },
+  ]
+  //taking only array of names
+  const arrayOfNames = students.map((student)=>student.name);
+  console.log(arrayOfNames);
+  //Adding a new property to each object e.g: passed/failed
+  const updateStudents = students.map((student)=> ({
+    ...student,
+    result: student.score>=50?"Pass":"Fail"
+  }));
+  console.log(updateStudents);
 
+  //filter method
+  const passStudents = students.filter((student)=>
+    student.score >= 50
+  );
+  console.log(passStudents);
   
