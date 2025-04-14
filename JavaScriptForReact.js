@@ -1,24 +1,24 @@
 // Destructuring  means extracting(unpacking) the data from objects and arrays and assigning them to new variables
 // We use it for api fetching
 //This is an object
-let studentData = {
-    name: "Ahtesham",
-    degree : "MS Computer Science",
-    graduation : 2025,
-    skills: ["Mern Stack", "AI Expert"],
-    education: {
-        matric: "Science",
-        inter: "Engineering"
-    },
-    isStudent: false,
-    absents : 0,
-    hobbies: function (hobby){
-        //printing by loop
-        for(const key in hobby){ //it's an object so 'for in loop' is used
-            console.log(`${key} : ${hobby[key]}`);
-        }
-    }
-}
+// let studentData = {
+//     name: "Ahtesham",
+//     degree : "MS Computer Science",
+//     graduation : 2025,
+//     skills: ["Mern Stack", "AI Expert"],
+//     education: {
+//         matric: "Science",
+//         inter: "Engineering"
+//     },
+//     isStudent: false,
+//     absents : 0,
+//     hobbies: function (hobby){
+//         //printing by loop
+//         for(const key in hobby){ //it's an object so 'for in loop' is used
+//             console.log(`${key} : ${hobby[key]}`);
+//         }
+//     }
+// }
 
 //normal way to extract data from object
 // const studentName = studentData.name;
@@ -262,28 +262,63 @@ let studentData = {
 
 
 
-//Optional Chaining (?.)
-//Optional chaining lets you safely access nested object properties without having to manually check if each level exists.
+// //Optional Chaining (?.)
+// //Optional chaining lets you safely access nested object properties without having to manually check if each level exists.
 
-//If the value before ?. is null or undefined, JavaScript stops and returns undefined — instead of throwing an error like "Cannot read property 'x' of undefined"
-// let user = {
-//     profile: {
-//       name: "Ali"
-//     }
-//   };
+// //If the value before ?. is null or undefined, JavaScript stops and returns undefined — instead of throwing an error like "Cannot read property 'x' of undefined"
+// // let user = {
+// //     profile: {
+// //       name: "Ali"
+// //     }
+// //   };
   
-//   console.log(user.profile?.name); // Ali
-//   console.log(user.contact?.email); // undefined (safe)
+// //   console.log(user.profile?.name); // Ali
+// //   console.log(user.contact?.email); // undefined (safe)
   
 
-//Ternary operator or conditional operator
-//1. condition, 2. true and 3. false
-const age = 24;
-age>=18 ? console.log("You are eligible") : console.log("You are not eligible");
+// //Ternary operator or conditional operator
+// //1. condition, 2. true and 3. false
+// // const age = 24;
+// // age>=18 ? console.log("You are eligible") : console.log("You are not eligible");
 
-//Ternary Operator is an expression
-const drive = age>18? "eligible":"Not eligible"
-console.log(drive);
+// // //Ternary Operator is an expression
+// // const drive = age>18? "eligible":"Not eligible"
+// // console.log(drive);
 
-//ternary operator can be used inside template literals
-console.log(`I am ${age>18? "":"not"} eligble to vote`)
+// // //ternary operator can be used inside template literals
+// // console.log(`I am ${age>18? "":"not"} eligble to vote`)
+
+// //map, filter and reduce methods
+// //map Method (creates another array, doesn't change the original array) 
+// // Ex # 01
+// const teachers = ["Dora", "Moana", "Plato"]
+// newTeachers = teachers.map((x)=>{
+//     return x + " student";
+// });
+// console.log(teachers);
+// console.log(newTeachers);
+// //Ex # 02
+// const numbers = [1,2,3,4,5];
+// const squared = numbers.map((x)=> x*x);
+// console.log(numbers);
+// console.log(squared);
+
+
+// //map with objects
+// const students = [
+//     { id: 1, name: "Ali", score: 85 },
+//     { id: 2, name: "Sara", score: 42 },
+//     { id: 3, name: "Usman", score: 74 },
+//     { id: 4, name: "Ahsan", score: 90 },
+//   ];
+//   //taking only array of names
+//   const arrayOfNames = students.map((student)=>student.name);
+//   console.log(arrayOfNames);
+//   //Adding a new property to each object e.g: passed/failed
+//   const updateStudents = students.map((student)=> ({
+//     ...student,
+//     result: student.score>=50?"Pass":"Fail"
+//   }));
+//   console.log(updateStudents);
+
+  
