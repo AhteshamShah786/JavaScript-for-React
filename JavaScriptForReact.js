@@ -328,6 +328,16 @@
 //   console.log(passStudents);
 
   //reduce method : This combines or calculates things into a single value
-    const numbers = [5, 12, 8, 21, 33, 7, 18];
-    const total = numbers.reduce((sum, num)=> sum+num,0);
-    console.log(total);
+     const numbers = [5, 12, 8, 21, 33, 7, 18];
+    // const total = numbers.reduce((sum, num)=> sum+num,0);
+    // console.log(total);
+
+    const evenCount = numbers.reduce((count, num) => {
+        return num % 2 === 0 ? count + 1 : count;
+      }, 0);
+      console.log(evenCount);
+
+    const oddCount = numbers.reduce((count, num) => {
+        return num % 2 !== 0 ? count+1 : count;
+    },0);
+    console.log(oddCount);
