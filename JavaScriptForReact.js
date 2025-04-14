@@ -328,16 +328,39 @@
 //   console.log(passStudents);
 
   //reduce method : This combines or calculates things into a single value
-     const numbers = [5, 12, 8, 21, 33, 7, 18];
-    // const total = numbers.reduce((sum, num)=> sum+num,0);
-    // console.log(total);
+    //  const numbers = [5, 12, 8, 21, 33, 7, 18];
+    // // const total = numbers.reduce((sum, num)=> sum+num,0);
+    // // console.log(total);
 
-    const evenCount = numbers.reduce((count, num) => {
-        return num % 2 === 0 ? count + 1 : count;
-      }, 0);
-      console.log(evenCount);
+    // const evenCount = numbers.reduce((count, num) => {
+    //     return num % 2 === 0 ? count + 1 : count;
+    //   }, 0);
+    //   console.log(evenCount);
 
-    const oddCount = numbers.reduce((count, num) => {
-        return num % 2 !== 0 ? count+1 : count;
-    },0);
-    console.log(oddCount);
+    // const oddCount = numbers.reduce((count, num) => {
+    //     return num % 2 !== 0 ? count+1 : count;
+    // },0);
+    // console.log(oddCount);
+
+    //sort method 
+    // const arr = [2,12,5,32,53,74,95,56];
+    // console.log(arr);
+    // let sortedArr = arr.sort(); //it changes the original array and it also sorts as a string so this array is not sorted yet
+    // console.log(sortedArr);
+    // console.log(arr); // original array is changed
+    // // For asending or descending order we need to pass compare function
+    // sortedArr = arr.sort((a,b)=> a-b);//ascending order
+    // console.log(sortedArr);
+    // sortedArr = arr.sort((a,b)=> b-a); //descending order
+    // console.log(sortedArr);
+
+    //array slice method returns a copy of the array so it will not change the original one
+  let array = [3,2,4,1,5];
+  let copyArray = array.slice();
+  console.log(array,copyArray) 
+  copyArray = array.slice().sort((a,b)=>a-b); //now sorting will be on new copied array instead of original one in ascending order
+  console.log(copyArray);
+  copyArray = array.slice().sort((a,b)=>b-a); //now sorting will be on new copied array instead of original one in descending order
+  console.log(copyArray);
+
+  
