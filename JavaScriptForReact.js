@@ -276,3 +276,14 @@ let studentData = {
 //   console.log(user.contact?.email); // undefined (safe)
   
 
+//Ternary operator or conditional operator
+//1. condition, 2. true and 3. false
+const age = 24;
+age>=18 ? console.log("You are eligible") : console.log("You are not eligible");
+
+//Ternary Operator is an expression
+const drive = age>18? "eligible":"Not eligible"
+console.log(drive);
+
+//ternary operator can be used inside template literals
+console.log(`I am ${age>18? "":"not"} eligble to vote`)
