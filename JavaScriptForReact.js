@@ -364,18 +364,31 @@
   // console.log(copyArray);
 
   // Asynchronous behavior by suing setTimeout method
-  function sayHello() {
-    console.log("Hello");
-  }
+  // function sayHello() {
+  //   console.log("Hello");
+  // }
   
-  function greetLater() {
-    setTimeout(() => {
-      console.log("This runs after 2 seconds");
-    }, 2000);
-  }
+  // function greetLater() {
+  //   setTimeout(() => {
+  //     console.log("This runs after 2 seconds");
+  //   }, 2000);
+  // }
   
-  console.log("Start");
-  sayHello();
-  greetLater();
-  console.log("End");
-  
+  // console.log("Start");
+  // sayHello();
+  // greetLater();
+  // console.log("End");
+
+  //callback hell or pyramid of doom: functions inside are dependent and messy
+  setTimeout(()=>{
+    console.log("One second")
+    setTimeout(()=>{
+      console.log("One second")
+      setTimeout(()=>{
+        console.log("One second")
+        setTimeout(()=>{
+          console.log("One second")
+        }, 1000);
+      }, 1000);
+    }, 1000);
+  }, 1000);
