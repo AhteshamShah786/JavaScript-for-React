@@ -96,15 +96,16 @@
 
 
 // //callback hell
-function getData(dataId){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("data", dataId);
-            resolve("success");
-        },2000)
-    })
+// function getData(dataId){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data", dataId);
+//             resolve("success");
+//         },2000)
+//     })
     
-}
+// }
+
 //Promise Chain
 // getData(1).then((res)=>{
 //     console.log(res);
@@ -114,10 +115,30 @@ function getData(dataId){
 // })
 
 //real promise chaining
-getData(1).then((res)=>{
-    return getData(2);
-}).then((res)=>{
-    return getData(3);
-}).then((res)=>{
-    console.log(res);
-})
+// getData(1).then((res)=>{
+//     return getData(2);
+// }).then((res)=>{
+//     return getData(3);
+// }).then((res)=>{
+//     console.log(res);
+// })
+
+//async function always returns a promise
+// async function hello(){
+//     console.log("Hello");
+// }
+// hello();
+//await keyword means to wait: it pauses the execution of its surroundings async function until the promise is settled
+//we can only use await inside a async function
+function api(){
+    return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Weather data");
+            resolve(200);
+            },2000);
+    })
+}
+async function getWeatherData(){
+    await api();
+}
+getWeatherData();
