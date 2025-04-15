@@ -54,17 +54,41 @@
 // })
 // console.log(myPromise)
 
-const getPromise = () => {
+// const getPromise = () => {
+//     return new Promise((resolve,reject)=>{
+//         console.log("I am a promise");
+//         resolve("success"); //if commented this line, promise will return failure
+//         reject("failure");
+//     })      
+// }
+// let promise = getPromise();
+// promise.then((res)=>{ 
+//     console.log("promise fulfilled", res);
+// })
+// promise.catch((err)=>{
+//     console.log("promise rejected", err);
+// })
+
+//Promise chainging then.then.then
+function asyncFunc1(){
     return new Promise((resolve,reject)=>{
-        console.log("I am a promise");
-        resolve("success"); //if commented this line, promise will return failure
-        reject("failure");
-    })      
+        setTimeout(()=>{
+            console.log("some data 1");
+            resolve("success")
+        },4000)
+    })
 }
-let promise = getPromise();
-promise.then((res)=>{ 
-    console.log("promise fulfilled", res);
-})
-promise.catch((err)=>{
-    console.log("promise rejected", err);
+function asyncFunc2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("some data 2");
+            resolve("success")
+        },4000)
+    })
+}
+console.log("fetching data 1")
+    asyncFunc1().then((res)=>{
+    console.log(res)
+    console.log("fetching data 2")
+    asyncFunc2().then((res)=>{});
 })
