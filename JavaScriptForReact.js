@@ -355,12 +355,27 @@
     // console.log(sortedArr);
 
     //array slice method returns a copy of the array so it will not change the original one
-  let array = [3,2,4,1,5];
-  let copyArray = array.slice();
-  console.log(array,copyArray) 
-  copyArray = array.slice().sort((a,b)=>a-b); //now sorting will be on new copied array instead of original one in ascending order
-  console.log(copyArray);
-  copyArray = array.slice().sort((a,b)=>b-a); //now sorting will be on new copied array instead of original one in descending order
-  console.log(copyArray);
+  // let array = [3,2,4,1,5];
+  // let copyArray = array.slice();
+  // console.log(array,copyArray) 
+  // copyArray = array.slice().sort((a,b)=>a-b); //now sorting will be on new copied array instead of original one in ascending order
+  // console.log(copyArray);
+  // copyArray = array.slice().sort((a,b)=>b-a); //now sorting will be on new copied array instead of original one in descending order
+  // console.log(copyArray);
 
+  // Asynchronous behavior by suing setTimeout method
+  function sayHello() {
+    console.log("Hello");
+  }
+  
+  function greetLater() {
+    setTimeout(() => {
+      console.log("This runs after 2 seconds");
+    }, 2000);
+  }
+  
+  console.log("Start");
+  sayHello();
+  greetLater();
+  console.log("End");
   
