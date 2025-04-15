@@ -69,26 +69,55 @@
 //     console.log("promise rejected", err);
 // })
 
-//Promise chainging then.then.then
-function asyncFunc1(){
+//Promise chainging with then
+// function asyncFunc1(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("some data 1");
+//             resolve("success")
+//         },4000)
+//     })
+// }
+// function asyncFunc2(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("some data 2");
+//             resolve("success")
+//         },4000)
+//     })
+// }
+// console.log("fetching data 1")
+//     asyncFunc1().then((res)=>{
+//     console.log(res)
+//     console.log("fetching data 2")
+//     asyncFunc2().then((res)=>{});
+// })
+
+
+
+// //callback hell
+function getData(dataId){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            console.log("some data 1");
-            resolve("success")
-        },4000)
+            console.log("data", dataId);
+            resolve("success");
+        },2000)
     })
+    
 }
-function asyncFunc2(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("some data 2");
-            resolve("success")
-        },4000)
-    })
-}
-console.log("fetching data 1")
-    asyncFunc1().then((res)=>{
-    console.log(res)
-    console.log("fetching data 2")
-    asyncFunc2().then((res)=>{});
+//Promise Chain
+// getData(1).then((res)=>{
+//     console.log(res);
+//     getData(2).then((res)=>{
+//         console.log(res)
+//     })
+// })
+
+//real promise chaining
+getData(1).then((res)=>{
+    return getData(2);
+}).then((res)=>{
+    return getData(3);
+}).then((res)=>{
+    console.log(res);
 })
