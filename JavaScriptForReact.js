@@ -379,16 +379,20 @@
   // greetLater();
   // console.log("End");
 
-  //callback hell or pyramid of doom: functions inside are dependent and messy
-  setTimeout(()=>{
-    console.log("One second")
-    setTimeout(()=>{
-      console.log("One second")
-      setTimeout(()=>{
-        console.log("One second")
-        setTimeout(()=>{
-          console.log("One second")
-        }, 1000);
-      }, 1000);
-    }, 1000);
-  }, 1000);
+  //callback function is an argument to another function
+  //callback hell or pyramid of doom: functions inside are dependent and
+  // setTimeout(()=>{
+  //   console.log("One second")
+  //   setTimeout(()=>{
+  //     console.log("One second")
+  //     setTimeout(()=>{
+  //       console.log("One second")
+  //       setTimeout(()=>{
+  //         console.log("One second")
+  //       }, 1000);
+  //     }, 1000);
+  //   }, 1000);
+  // }, 1000);
+
+  // to avoid callback hell we use promises, no need to use callback hell
+  
