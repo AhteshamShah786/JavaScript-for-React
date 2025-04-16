@@ -130,15 +130,16 @@
 // hello();
 //await keyword means to wait: it pauses the execution of its surroundings async function until the promise is settled
 //we can only use await inside a async function
-function api(){
-    return new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                console.log("Weather data");
-            resolve(200);
-            },2000);
-    })
-}
-async function getWeatherData(){
-    await api();
-}
-getWeatherData();
+// function api(){
+//     return new Promise((resolve,reject)=>{
+//             setTimeout(()=>{
+//                 console.log("Weather data");
+//             resolve(200);
+//             },2000);
+//     })
+// }
+// async function getWeatherData(){
+//     await api();
+// }
+// getWeatherData();
+
